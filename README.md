@@ -7,6 +7,7 @@ A fully customisable Flutter Border Bottom Navigation Bar.
 <div/>
 
 <b>Usage : </b>
+
                     class HomeView extends StatefulWidget {
                     @override
                     State<HomeView> createState() => _HomeViewState();

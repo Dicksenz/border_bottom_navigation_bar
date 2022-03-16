@@ -8,6 +8,9 @@ A fully customisable Flutter Border Bottom Navigation Bar.
 
 <b>Usage : </b>
 
+
+<code>
+
 // ignore: use_key_in_widget_constructors
 class HomeView extends StatefulWidget {
   @override
@@ -78,4 +81,6 @@ class _HomeViewState extends State<HomeView> {
     );
   }
 }
+
+</code>
             

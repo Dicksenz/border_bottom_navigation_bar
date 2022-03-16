@@ -7,7 +7,39 @@ A fully customisable Flutter Border Bottom Navigation Bar.
 <div/>
 
 <b>Usage : </b>
-            bottomNavigationBar: BorderBottomNavigationBar(
+                    class HomeView extends StatefulWidget {
+                    @override
+                    State<HomeView> createState() => _HomeViewState();
+                    }
+
+                    class _HomeViewState extends State<HomeView> {
+                    int _currentIndex = 0;
+                    @override
+                    Widget build(BuildContext context) {
+                        return Scaffold(
+                        extendBody: true,
+                        appBar: AppBar(
+                            backgroundColor: Colors.blue[900],
+                        ),
+                        body: ListView.builder(
+                            itemCount: 100,
+                            itemBuilder: (context, index) {
+                            return Container(
+                                height: 300,
+                                margin: const EdgeInsets.only(bottom: 10),
+                                decoration: BoxDecoration(
+                                color: Colors.grey[350],
+                                image: DecorationImage(
+                                    image: NetworkImage(
+                                    'https://picsum.photos/id/$index/500',
+                                    ),
+                                    fit: BoxFit.cover,
+                                ),
+                                ),
+                            );
+                            },
+                        ),
+                        bottomNavigationBar: BorderBottomNavigationBar(
                             height: 53,
                             currentIndex: _currentIndex,
                             borderRadiusValue: 25,
@@ -40,5 +72,8 @@ A fully customisable Flutter Border Bottom Navigation Bar.
                                 icon: Icons.more_horiz,
                             ),
                             ],
-                        )
-         
+                        ),
+                        );
+                    }
+                    }
+

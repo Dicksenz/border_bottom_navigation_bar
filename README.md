@@ -3,7 +3,7 @@
 A fully customisable Flutter Border Bottom Navigation Bar.
 
 <div style="display:flex">
-<img width="355" alt="alert2" src="https://github.com/Dicksenz/border_bottom_navigation_bar/screenshot.png" width="200">
+<img width="355" alt="alert2" src="https://github.com/Dicksenz/border_bottom_navigation_bar/blob/main/screenshot.png?raw=true" width="200">
 <div/>
 
 <b>Usage : </b>

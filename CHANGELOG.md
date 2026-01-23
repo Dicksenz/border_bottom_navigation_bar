@@ -1,3 +1,7 @@
+## 1.0.1
+
+- **SelectedIconSize and UnselectedIconSize**: Added support for customizing the size of selected and unselected icons.
+
 ## 1.0.0
 
 - **Breaking Change**: Updated to support Flutter 3.0+ and Dart 3.0+.

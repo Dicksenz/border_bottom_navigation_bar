@@ -58,7 +58,8 @@ A fully customisable Flutter Border Bottom Navigation Bar.
                             unselectedBackgroundColor: Colors.transparent,
                             unselectedIconColor: Colors.grey,
                             selectedIconColor: Colors.lightBlueAccent,
-
+                            selectedIconSize: 24,
+                            unselectedIconSize: 24,
                             customBottomNavItems: [
                             BorderBottomNavigationItems(
                                 icon: Icons.camera_alt_outlined,

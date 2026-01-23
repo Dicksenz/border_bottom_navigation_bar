@@ -13,6 +13,8 @@ class BorderBottomNavigationBar extends StatelessWidget {
   final Color unselectedLabelColor;
   final Color selectedIconColor;
   final Color unselectedIconColor;
+  final double selectedIconSize;
+  final double unselectedIconSize;
   final int currentIndex;
   final Function(int) onTap;
 
@@ -26,6 +28,8 @@ class BorderBottomNavigationBar extends StatelessWidget {
     required this.unselectedBackgroundColor,
     required this.selectedIconColor,
     required this.unselectedIconColor,
+    this.selectedIconSize = 24.0,
+    this.unselectedIconSize = 24.0,
     this.currentIndex = 0,
     this.unselectedLabelFontSize = 12,
     this.selectedLabelFontSize = 12,
@@ -37,6 +41,7 @@ class BorderBottomNavigationBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
+      bottom: true,
       child: Padding(
         padding: EdgeInsets.symmetric(
           horizontal: MediaQuery.of(context).size.width * 0.05,
@@ -67,6 +72,8 @@ class BorderBottomNavigationBar extends StatelessWidget {
                   currentIndex: currentIndex,
                   selectedLabelFontSize: selectedLabelFontSize,
                   unselectedLabelFontSize: unselectedLabelFontSize,
+                  selectedIconSize: selectedIconSize,
+                  unselectedIconSize: unselectedIconSize,
                 ),
               );
             }),
@@ -97,6 +104,8 @@ class BorderBottomNavigationButton extends StatelessWidget {
   final Color unselectedLabelColor;
   final Color selectedIconColor;
   final Color unselectedIconColor;
+  final double selectedIconSize;
+  final double unselectedIconSize;
   final Function(int) onTap;
   final int? currentIndex;
   final int index;
@@ -115,6 +124,8 @@ class BorderBottomNavigationButton extends StatelessWidget {
     required this.label,
     required this.selectedIconColor,
     required this.unselectedIconColor,
+    required this.selectedIconSize,
+    required this.unselectedIconSize,
   });
 
   @override
@@ -128,25 +139,35 @@ class BorderBottomNavigationButton extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Container(
-            width: 64,
-            height: 32,
+            width: 100,
+            height: 50,
+            padding: EdgeInsets.all(3),
             decoration: BoxDecoration(
               color: isSelected ? selectedBackgroundColor : Colors.transparent,
-              borderRadius: BorderRadius.circular(20),
+              borderRadius: BorderRadius.circular(50),
             ),
-            child: Icon(
-              icon,
-              color: isSelected ? selectedIconColor : unselectedIconColor,
-            ),
-          ),
-          const SizedBox(height: 4),
-          Text(
-            label,
-            style: TextStyle(
-              color: isSelected ? selectedLabelColor : unselectedLabelColor,
-              fontSize:
-                  isSelected ? selectedLabelFontSize : unselectedLabelFontSize,
-              fontWeight: isSelected ? FontWeight.bold : FontWeight.normal,
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Icon(
+                  icon,
+                  color: isSelected ? selectedIconColor : unselectedIconColor,
+                  size: isSelected ? selectedIconSize : unselectedIconSize,
+                ),
+                Text(
+                  label,
+                  style: TextStyle(
+                    color:
+                        isSelected ? selectedLabelColor : unselectedLabelColor,
+                    fontSize: isSelected
+                        ? selectedLabelFontSize
+                        : unselectedLabelFontSize,
+                    fontWeight:
+                        isSelected ? FontWeight.bold : FontWeight.normal,
+                  ),
+                ),
+              ],
             ),
           ),
         ],

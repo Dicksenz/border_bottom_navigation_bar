@@ -41,40 +41,43 @@ A fully customisable Flutter Border Bottom Navigation Bar.
                             },
                         ),
                         bottomNavigationBar: BorderBottomNavigationBar(
-                            height: 53,
+                            height: 80,
                             currentIndex: _currentIndex,
                             borderRadiusValue: 25,
                             onTap: (index) {
                             setState(() {
                                 _currentIndex = index;
                             });
-                            print(index);
                             },
+                            // Custom colors for Material 3 dark theme
+                            backgroundColor: Colors.black,
+                            selectedBackgroundColor: const Color(0xFF0F3042), // Dark teal for pill
+
                             selectedLabelColor: Colors.white,
                             unselectedLabelColor: Colors.grey,
-                            selectedBackgroundColor: Colors.blue[900]!,
-                            unselectedBackgroundColor: Colors.grey[200]!,
-                            unselectedIconColor: Colors.grey[600]!,
-                            selectedIconColor: Colors.white,
+                            unselectedBackgroundColor: Colors.transparent,
+                            unselectedIconColor: Colors.grey,
+                            selectedIconColor: Colors.lightBlueAccent,
+
                             customBottomNavItems: [
                             BorderBottomNavigationItems(
-                                icon: Icons.home,
+                                icon: Icons.camera_alt_outlined,
+                                label: 'Camera',
                             ),
                             BorderBottomNavigationItems(
-                                icon: Icons.event_note_outlined,
+                                icon: Icons.location_on_outlined,
+                                label: 'Map', // Labels are now required
                             ),
                             BorderBottomNavigationItems(
-                                icon: Icons.add_circle_outline_outlined,
-                            ),
-                            BorderBottomNavigationItems(
-                                icon: Icons.rss_feed_outlined,
+                                icon: Icons.calendar_today_outlined,
+                                label: 'Event',
                             ),
                             BorderBottomNavigationItems(
                                 icon: Icons.more_horiz,
+                                label: 'More',
                             ),
                             ],
                         ),
                         );
                     }
                     }
-

@@ -4,19 +4,24 @@ import 'package:flutter/material.dart';
 void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomeView(),
+      theme: ThemeData(
+        useMaterial3: true,
+        brightness: Brightness.dark,
+        scaffoldBackgroundColor: Colors.black,
+      ),
+      home: const HomeView(),
     );
   }
 }
 
-// ignore: use_key_in_widget_constructors
 class HomeView extends StatefulWidget {
+  const HomeView({super.key});
   @override
   State<HomeView> createState() => _HomeViewState();
 }
@@ -49,36 +54,37 @@ class _HomeViewState extends State<HomeView> {
         },
       ),
       bottomNavigationBar: BorderBottomNavigationBar(
-        height: 53,
+        height: 80,
         currentIndex: _currentIndex,
         borderRadiusValue: 25,
         onTap: (index) {
           setState(() {
             _currentIndex = index;
           });
-          print(index);
         },
         selectedLabelColor: Colors.white,
         unselectedLabelColor: Colors.grey,
-        selectedBackgroundColor: Colors.blue[900]!,
-        unselectedBackgroundColor: Colors.grey[200]!,
-        unselectedIconColor: Colors.grey[600]!,
-        selectedIconColor: Colors.white,
+        backgroundColor: Colors.black,
+        unselectedBackgroundColor: Colors.transparent,
+        selectedBackgroundColor: const Color(0xFF0F3042),
+        unselectedIconColor: Colors.grey,
+        selectedIconColor: Colors.lightBlueAccent,
         customBottomNavItems: [
           BorderBottomNavigationItems(
-            icon: Icons.home,
+            icon: Icons.camera_alt_outlined,
+            label: 'Camera',
           ),
           BorderBottomNavigationItems(
-            icon: Icons.event_note_outlined,
+            icon: Icons.location_on_outlined,
+            label: 'Map',
           ),
           BorderBottomNavigationItems(
-            icon: Icons.add_circle_outline_outlined,
-          ),
-          BorderBottomNavigationItems(
-            icon: Icons.rss_feed_outlined,
+            icon: Icons.calendar_today_outlined,
+            label: 'Event',
           ),
           BorderBottomNavigationItems(
             icon: Icons.more_horiz,
+            label: 'More',
           ),
         ],
       ),

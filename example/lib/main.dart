@@ -56,19 +56,21 @@ class _HomeViewState extends State<HomeView> {
       bottomNavigationBar: BorderBottomNavigationBar(
         height: 80,
         currentIndex: _currentIndex,
-        borderRadiusValue: 25,
+        borderRadiusValue: 50,
         onTap: (index) {
           setState(() {
             _currentIndex = index;
           });
         },
-        selectedLabelColor: Colors.white,
+        selectedLabelColor: Colors.lightBlueAccent,
         unselectedLabelColor: Colors.grey,
         backgroundColor: Colors.black,
         unselectedBackgroundColor: Colors.transparent,
         selectedBackgroundColor: const Color(0xFF0F3042),
         unselectedIconColor: Colors.grey,
         selectedIconColor: Colors.lightBlueAccent,
+        selectedIconSize: 24,
+        unselectedIconSize: 24,
         customBottomNavItems: [
           BorderBottomNavigationItems(
             icon: Icons.camera_alt_outlined,

@@ -1,3 +1,5 @@
+## 1.0.2
+
 ## 1.0.1
 
 - **SelectedIconSize and UnselectedIconSize**: Added support for customizing the size of selected and unselected icons.

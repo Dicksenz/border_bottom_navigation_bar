@@ -3,7 +3,7 @@
 A fully customisable Flutter Border Bottom Navigation Bar.
 
 <div style="display:flex">
-<img width="355" alt="alert2" src="https://private-user-images.githubusercontent.com/44444254/539676374-08f4eb99-690b-4f40-9958-399a500202b1.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NjkxNjA3NzQsIm5iZiI6MTc2OTE2MDQ3NCwicGF0aCI6Ii80NDQ0NDI1NC81Mzk2NzYzNzQtMDhmNGViOTktNjkwYi00ZjQwLTk5NTgtMzk5YTUwMDIwMmIxLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNjAxMjMlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjYwMTIzVDA5Mjc1NFomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWM3YzQ1NjhiOGRmMzQxMmVjZTM2Mjc1ZjcxOGNjMjQ5MTI5MjQ5NjNjZjQ1MTNiMWEzOTZmZTc1NTE5ODk2MTQmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.V_9y1YFMLic9Al5fHokP4yJtf2tLESAjmDrHX2SVbNE" width="200">
+<img width="355" alt="alert2" src="https://github-production-user-asset-6210df.s3.amazonaws.com/44444254/539681090-a11eefbc-9048-417b-9192-a3454926e5e2.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20260123%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20260123T094139Z&X-Amz-Expires=300&X-Amz-Signature=471319b7765b65ffc5f9529cf92b417c4a48c059345b35669230afeb6f999f5b&X-Amz-SignedHeaders=host" width="200">
 <div/>
 
 <b>Usage : </b>
